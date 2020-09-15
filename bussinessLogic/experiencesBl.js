@@ -17,7 +17,7 @@ const findTop5Experiences = () => {
 const findExperience = (id) => {
     const experience = EXPERIENCES.find( el => Number(id) === el.id)
     if (experience === undefined) throw('Not found')
-    return { experiences }
+    return { experience }
 }
 
 module.exports = {
