@@ -6,8 +6,10 @@ const port = 3001
 
 // Router
 const experiencesRouters = require('./routes/experiences')
+const bookingRouters = require('./routes/bookings')
 
 app.use('/experiences', experiencesRouters)
+app.use('/bookings', bookingRouters)
 
 /** Sample endpoints:
   - localhost:3001/experiences/all
