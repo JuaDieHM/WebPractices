@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(cors())
 const port = 3001
 
 // Router
 const experiencesRouters = require('./routes/experiences')
-const bookingRouters = require('./routes/bookings')
+const bookingRouters = require('./routes/booking')
 
 app.use('/experiences', experiencesRouters)
 app.use('/bookings', bookingRouters)

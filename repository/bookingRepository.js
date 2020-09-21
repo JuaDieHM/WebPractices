@@ -3,20 +3,18 @@ const BOOKINGS = [
         id: 1,
         description: 'Casa de descando',
         place: 'Santa Elena',
-        reservedBy: 'Andrea Zuluaga',
+        name: 'Andrea Zuluaga',
         date: '25-09-2020',
-        cellPhone: '3023259901',
-        clientDocument: '42021067',
+        phoneNumber: '3023259901',
         clientEmail: 'andrezulu@gmail.com'
     },
     {
         id: 2,
         description: 'Casa de playa',
         place: 'Santa Marta',
-        reservedBy: 'Francisco Javier Torres',
+        name: 'Francisco Javier Torres',
         date: '29-09-2020',
-        cellPhone: '3023259902',
-        clientDocument: '42021068',
+        phoneNumber: '3023259902',
         clientEmail: 'francitorr@gmail.com'
     }
 ]

@@ -1,6 +1,7 @@
 const {
     findAllBookings,
-    addBooking
+    addBooking,
+    registerBooking
 } = require('./../bussinessLogic/bookingsBl')
 
 const allBooking = (req, res) => {
@@ -18,6 +19,15 @@ const add = (req, res) => {
     }
 }
 
+const register = (user, res) => {
+    try {
+        const response = registerBooking(user)
+        res.json(response)
+    } catch (error) {
+        res.status(404).send(error)
+    }
+}
+
 module.exports = {
-    allBooking, add
+    allBooking, add, register
 }

@@ -10,7 +10,24 @@ const addBooking = (booking) => {
     return { isExistingBooking }
 }
 
+const registerBooking = (user) => {
+    const {name, phoneNumber, email } = user
+
+    if (name !== '' && phoneNumber !== '' && email !== ''){    
+        BOOKINGS.push(user)
+        return (
+            `Usuario registrado  la informacion es: 
+            Id: ${user.id},
+            Name: ${user.name},
+            PhoneNumber: ${user.phoneNumber},
+            Email: ${user.email},
+            Date: ${user.date}`
+        )
+    }
+}
+
 module.exports = {
     findAllBookings,
-    addBooking
+    addBooking,
+    registerBooking
 }
