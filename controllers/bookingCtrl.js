@@ -19,9 +19,9 @@ const add = (req, res) => {
     }
 }
 
-const register = (user, res) => {
+const register = async (user, res) => {
     try {
-        const response = registerBooking(user)
+        const response = await registerBooking(user)
         res.json(response)
     } catch (error) {
         res.status(404).send(error)

@@ -7,7 +7,7 @@ router.post('/addbooking', )
 router.post('/register',  (req, res) => {
     const user = req.body;
     register(user, res)
-    return res.send(`Ejecuto el registro de booking. - ${user.id}, ${user.name}, ${user.phoneNumber}, ${user.email}, ${user.date}`)
+    return res.send(`Ejecuto el registro de booking. - ${user.experience_id}, ${user.name}, ${user.phone}, ${user.email}, ${user.booking_date}`)
 })
 
 module.exports = router

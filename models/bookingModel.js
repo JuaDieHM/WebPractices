@@ -1,9 +1,9 @@
 const mongoose=require('mongoose')
 const { mongo } =require('mongoose')
-constmoongose=require('mongoose')
-const { Schema } =mongoose
+const moongose = require('mongoose')
+const { Schema } = mongoose
  
-constBookingSchema=newSchema({
+const BookingSchema = new Schema({
     name:String,
     email:String,
     phone:String,
@@ -11,7 +11,7 @@ constBookingSchema=newSchema({
     experience_id:String
 })
  
-constBookingModel=moongose.model('bookings', BookingSchema)
+const BookingModel = moongose.model('bookings', BookingSchema)
  
-module.exports=BookingModel
+module.exports = BookingModel
 

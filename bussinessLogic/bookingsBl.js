@@ -1,4 +1,5 @@
 const BOOKINGS = require('./../repository/bookingRepository')
+const BookingModel = require('../models/bookingModel')
 
 const findAllBookings = () => {
     return { booking : BOOKINGS }
@@ -10,19 +11,12 @@ const addBooking = (booking) => {
     return { isExistingBooking }
 }
 
-const registerBooking = (user) => {
-    const {name, phoneNumber, email } = user
-
-    if (name !== '' && phoneNumber !== '' && email !== ''){    
-        BOOKINGS.push(user)
-        return (
-            `Usuario registrado  la informacion es: 
-            Id: ${user.id},
-            Name: ${user.name},
-            PhoneNumber: ${user.phoneNumber},
-            Email: ${user.email},
-            Date: ${user.date}`
-        )
+const registerBooking = async (user) => {
+    try {
+        await BookingModel.create(user)
+        return ('Reserva registrada para su usuario.')
+    } catch(error) {
+        throw error
     }
 }
 
